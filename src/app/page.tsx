@@ -21,11 +21,11 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4 sm:p-6 lg:p-8">
+    <div className="min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-8">
       <div className="w-full max-w-2xl mx-auto space-y-6 sm:space-y-8">
         {/* Logo */}
         <div className="text-center">
-          <div className="flex gap-3 items-center justify-center mb-2">
+          <div className="flex gap-2 items-center justify-center mb-2">
             <Image
               src="/favicon.svg"
               alt="Hands Logo"
@@ -52,7 +52,7 @@ export default function Home() {
             <div className="max-h-64 sm:max-h-80 overflow-y-auto space-y-4 text-sm sm:text-base text-slate-700 mb-6 pr-2 custom-scrollbar">
               <div>
                 <h3 className="font-semibold text-slate-800 mb-2">
-                  1.Camera Access & Privacy
+                  Camera Access & Privacy
                 </h3>
                 <p>
                   This application requires access to your device's camera to
@@ -65,7 +65,7 @@ export default function Home() {
 
               <div>
                 <h3 className="font-semibold text-slate-800 mb-2">
-                  2.Data Collection
+                  Data Collection
                 </h3>
                 <p>
                   We collect minimal data necessary for app functionality,
@@ -78,19 +78,19 @@ export default function Home() {
 
               <div>
                 <h3 className="font-semibold text-slate-800 mb-2">
-                  3.Gesture Recognition Technology
+                  Gesture Recognition Technology
                 </h3>
                 <p>
-                  Our app uses a safe system for hand gesture detection. This
-                  technology operates entirely within your browser for your
-                  privacy and security. Gesture data is processed in real-time
-                  and immediately discarded after use.
+                  This application uses a safe system for hand gesture
+                  detection. This technology operates entirely within your
+                  browser for your privacy and security. Gesture data is
+                  processed in real-time and immediately discarded after use.
                 </p>
               </div>
 
               <div>
                 <h3 className="font-semibold text-slate-800 mb-2">
-                  4.News Content
+                  News Content
                 </h3>
                 <p>
                   News articles are sourced from third-party APIs and news
@@ -102,7 +102,7 @@ export default function Home() {
 
               <div>
                 <h3 className="font-semibold text-slate-800 mb-2">
-                  5.Device Compatibility
+                  Device Compatibility
                 </h3>
                 <p>
                   This application requires a device with camera capabilities
@@ -113,7 +113,7 @@ export default function Home() {
 
               <div>
                 <h3 className="font-semibold text-slate-800 mb-2">
-                  6.User Safety
+                  User Safety
                 </h3>
                 <p>
                   Please use gesture controls in a safe environment. Ensure
@@ -125,11 +125,11 @@ export default function Home() {
 
               <div>
                 <h3 className="font-semibold text-slate-800 mb-2">
-                  7.Limitation of Liability
+                  Limitation of Liability
                 </h3>
                 <p>
-                  The application is provided "as is" without warranties. We are
-                  not liable for any damages arising from the use of this
+                  This application is provided "as is" without warranties. We
+                  are not liable for any damages arising from the use of this
                   application, including but not limited to technical
                   malfunctions or gesture recognition errors.
                 </p>
@@ -137,7 +137,7 @@ export default function Home() {
 
               <div>
                 <h3 className="font-semibold text-slate-800 mb-2">
-                  8.Updates and Changes
+                  Updates and Changes
                 </h3>
                 <p>
                   We reserve the right to update these terms and the application
@@ -148,7 +148,7 @@ export default function Home() {
 
               <div>
                 <h3 className="font-semibold text-slate-800 mb-2">
-                  9.Contact Information
+                  Contact Information
                 </h3>
                 <p>
                   For questions about these terms or the application, please
@@ -172,10 +172,7 @@ export default function Home() {
                   htmlFor="terms-checkbox"
                   className="text-sm sm:text-base text-slate-700 leading-relaxed"
                 >
-                  I have read and agree to the Terms and Conditions. I
-                  understand that this app will access my camera for gesture
-                  recognition and that all processing happens locally on my
-                  device.
+                  I have read, understand and agree to the Terms and Conditions.
                 </label>
               </div>
 

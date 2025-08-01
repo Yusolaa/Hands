@@ -56,4 +56,4 @@ Reading morning news while having breakfast
 Accessible navigation for users with limited mobility
 
 Built with Next.js and React, Hands represents the future of human-computer interaction - making advanced gesture recognition practical and accessible for everyday news consumption.
->>>>>>> a17d3bd6b21450a234ced21bcbaffb4d2062e2dc
+

@@ -270,8 +270,14 @@ export default function NewsPage() {
           <div className="flex items-center justify-between h-14 xs:h-16 sm:h-20">
             {/* Logo - Responsive */}
             <div className="flex items-center space-x-2 xs:space-x-3">
-              <div className="flex items-center space-x-1 xs:space-x-2">
-                <Hand className="text-blue-600" size={24} />
+              <div className="flex gap-2 items-center">
+                <Image
+                  src="/favicon.svg"
+                  alt="Hands Logo"
+                  width={40}
+                  height={40}
+                  className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12"
+                />
                 <h1 className="text-lg xs:text-xl sm:text-2xl font-bold text-gray-900">
                   Hands
                 </h1>
@@ -294,8 +300,6 @@ export default function NewsPage() {
                 gestureMode ? "Disable gesture mode" : "Enable gesture mode"
               }
             >
-              <Hand size={16} className="xs:hidden" />
-              <Hand size={18} className="hidden xs:block" />
               <span className="hidden xs:inline">
                 {gestureMode ? "Gesture ON" : "Gestures"}
               </span>

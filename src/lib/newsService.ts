@@ -41,7 +41,7 @@ export type NewsCategory =
 export type SortBy = "relevancy" | "popularity" | "publishedAt";
 
 const NEWS_API_KEY = process.env.NEXT_PUBLIC_NEWS_API_KEY;
-const BASE_URL = process.env.BASE_URL;
+const BASE_URL = "https://newsapi.org/v2";
 
 export class NewsService {
   static async getTopHeadlines(

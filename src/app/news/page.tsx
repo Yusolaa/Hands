@@ -278,9 +278,6 @@ export default function NewsPage() {
                   height={40}
                   className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12"
                 />
-                <h1 className="text-lg xs:text-xl sm:text-2xl font-bold text-gray-900">
-                  Hands
-                </h1>
               </div>
               <div className="hidden sm:block w-px h-4 xs:h-6 bg-gray-300" />
               <span className="hidden sm:inline text-gray-600 font-medium text-sm xs:text-base">

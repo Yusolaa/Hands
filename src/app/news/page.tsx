@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import {
-  Hand,
   Search,
   Filter,
   Clock,
@@ -13,11 +12,16 @@ import {
   Loader2,
   AlertCircle,
   RefreshCw,
-  TrendingUp,
+  Volleyball,
   Globe,
   LucideIcon,
   Menu,
   X,
+  Atom,
+  Cpu,
+  HeartPlus,
+  TvMinimalPlay,
+  Handshake,
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { NewsService, NewsArticle, NewsCategory } from "@/lib/newsService";
@@ -30,12 +34,12 @@ interface Category {
 
 const categories: Category[] = [
   { id: "general", label: "General", icon: Globe },
-  { id: "business", label: "Business", icon: TrendingUp },
-  { id: "technology", label: "Technology", icon: Loader2 },
-  { id: "entertainment", label: "Entertainment", icon: Clock },
-  { id: "health", label: "Health", icon: AlertCircle },
-  { id: "science", label: "Science", icon: RefreshCw },
-  { id: "sports", label: "Sports", icon: TrendingUp },
+  { id: "business", label: "Business", icon: Handshake },
+  { id: "technology", label: "Technology", icon: Cpu },
+  { id: "entertainment", label: "Entertainment", icon: TvMinimalPlay },
+  { id: "health", label: "Health", icon: HeartPlus },
+  { id: "science", label: "Science", icon: Atom },
+  { id: "sports", label: "Sports", icon: Volleyball },
 ];
 
 interface ArticleCardProps {
@@ -55,20 +59,21 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
   onToggleBookmark,
   onShare,
 }) => (
-  <Card className="group hover:shadow-xl transition-all duration-300 overflow-hidden border-0 bg-white/80 backdrop-blur-sm">
+  <Card className="group hover:cursor-pointer hover:shadow-xl transition-all duration-300 overflow-hidden border-0 bg-white/80 backdrop-blur-sm">
     <div className="relative">
       {article.urlToImage && (
-        <div className="relative h-40 xs:h-44 sm:h-48 md:h-52 lg:h-56 overflow-hidden">
+        <div className="relative h-40 ">
           <Image
             src={article.urlToImage}
             alt={article.title}
             fill
-            className="object-cover group-hover:scale-105 transition-transform duration-500"
+            className="object-cover group-hover:scale-105 transition-transform duration-500 w-full"
             onError={(e) => {
               const target = e.target as HTMLElement;
               target.style.display = "none";
             }}
           />
+
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
           <div className="absolute top-2 left-2 xs:top-3 xs:left-3">
             <span className="bg-blue-600/90 text-white px-1.5 py-0.5 xs:px-2 xs:py-1 rounded-full text-xs font-medium backdrop-blur-sm">
@@ -78,7 +83,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
         </div>
       )}
 
-      <div className="p-3 xs:p-4 sm:p-5 md:p-6">
+      <div className="p-3 ">
         <div className="flex items-center justify-between mb-2 xs:mb-3">
           <div className="flex items-center space-x-1 xs:space-x-2 text-xs xs:text-sm text-gray-500">
             <Clock size={12} className="xs:hidden" />
@@ -306,7 +311,7 @@ export default function NewsPage() {
         </div>
       </header>
 
-      <div className="w-full px-3 xs:px-4 sm:px-6 lg:px-8 py-4 xs:py-6 sm:py-8 max-w-7xl mx-auto">
+      <div className="w-full p-3 max-w-7xl mx-auto">
         {/* Search and Filters - Mobile First */}
         <div className="mb-6 xs:mb-8 space-y-4 xs:space-y-6">
           {/* Search Bar - Responsive */}
@@ -340,7 +345,7 @@ export default function NewsPage() {
               onClick={() => setShowMobileCategories(!showMobileCategories)}
               className="sm:hidden w-full flex items-center justify-between bg-white/60 backdrop-blur-sm p-3 rounded-xl border border-gray-200 text-gray-700 font-medium"
             >
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 ">
                 <Filter size={16} />
                 <span>
                   {categories.find((cat) => cat.id === selectedCategory)
@@ -404,11 +409,11 @@ export default function NewsPage() {
 
         {/* Content */}
         {loading ? (
-          <div className="flex items-center justify-center py-16 xs:py-20">
+          <div className="flex items-center justify-center min-h-svh">
             <div className="text-center">
               <Loader2
                 className="animate-spin text-blue-600 mx-auto mb-4"
-                size={40}
+                size={60}
               />
               <p className="text-gray-600 font-medium text-sm xs:text-base">
                 Loading latest news...

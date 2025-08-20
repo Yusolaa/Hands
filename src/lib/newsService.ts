@@ -47,7 +47,7 @@ export class NewsService {
   static async getTopHeadlines(
     country: string = "us",
     category: NewsCategory | null = null,
-    pageSize: number = 20
+    pageSize: number = 50
   ): Promise<NewsResponse> {
     try {
       if (!NEWS_API_KEY) {

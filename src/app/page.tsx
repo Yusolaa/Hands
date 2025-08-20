@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { Loader2 } from "lucide-react";
 
 export default function Home() {
   const [isChecked, setIsChecked] = useState(false);
@@ -31,14 +32,9 @@ export default function Home() {
         {!mounted ? (
           // Skeleton loader - same structure as main content
           <>
-            <div className="text-center">
-              <div className="flex gap-2 items-center justify-center mb-2">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-slate-200 rounded animate-pulse" />
-                <div className="h-8 sm:h-10 lg:h-12 bg-slate-200 rounded w-32 animate-pulse" />
-              </div>
-              <div className="h-5 bg-slate-200 rounded w-64 mx-auto animate-pulse" />
+            <div className="flex items-center justify-center">
+              <Loader2 className="animate-spin text-blue-600" size={60} />
             </div>
-            <div className="h-96 bg-slate-200 rounded animate-pulse" />
           </>
         ) : (
           // Main content
@@ -209,7 +205,7 @@ export default function Home() {
                       disabled={!isChecked}
                       className={`flex-1 py-3 px-6 rounded-lg font-medium text-base transition-all duration-200 ${
                         isChecked
-                          ? "bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                          ? "bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 cursor-pointer"
                           : "bg-slate-300 text-slate-500 cursor-not-allowed"
                       }`}
                     >
